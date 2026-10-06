@@ -1,0 +1,3 @@
+Source rows: 120
+Target rows: 118
+Missing rows: 2
