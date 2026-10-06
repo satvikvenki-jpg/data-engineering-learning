@@ -1,0 +1,5 @@
+[
+  {"table": "orders", "source_rows": 120, "target_rows": 118},
+  {"table": "customers", "source_rows": 80, "target_rows": 80},
+  {"table": "products", "source_rows": 30, "target_rows": 31}
+]
