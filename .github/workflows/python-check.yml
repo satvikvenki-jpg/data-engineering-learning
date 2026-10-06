@@ -1,0 +1,28 @@
+name: Python Starting Example
+
+on:
+  push:
+    paths:
+      - 'exercises/**'
+      - '.github/workflows/python-check.yml'
+  pull_request:
+    paths:
+      - 'exercises/**'
+      - '.github/workflows/python-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  run-example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Check Python syntax
+        run: python -m compileall -q exercises
+      - name: Run the first example
+        run: python exercises/week01/row_counts.py
